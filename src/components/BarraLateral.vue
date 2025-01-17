@@ -1,13 +1,28 @@
 <template>
     <header>
         <h1>
-            <img class="image is-96x96" src="../assets/logo.png" alt="">
+            <img src="../assets/logo.png" alt="">
         </h1>
-        <div class="is-justify-content-center is-align-content-end" style="height: 85%;">
-            <button class="button is-light is-flex is-align-content-end" @click="alterarTema">
-                {{ textoBotao }}
-            </button>
-        </div>
+        <button class="button" @click="alterarTema">
+            {{ textoBotao }}
+        </button>
+        <nav class="panel shadow-none mt-5">
+            <ul>
+                <li>
+                    <router-link class="link" to="/">
+                        <i class="fas fa-tasks"></i>
+                        Tarefas
+                    </router-link>
+                </li>
+
+                <li>
+                    <router-link class="link" to="/projetos">
+                        <i class="fas fa-project-diagram"></i>
+                        Projetos
+                    </router-link>
+                </li>
+            </ul>
+        </nav>
     </header>
 </template>
 
@@ -19,7 +34,7 @@ export default defineComponent({
     emits: ['aoTemaAlterado'],
     data() {
         return {
-            modoEscuroAtivo: true
+            modoEscuroAtivo: false
         }
     },
     computed: {
@@ -53,5 +68,26 @@ header {
         padding: 2.5rem;
         height: auto;
     }
+}
+
+.panel li {
+    margin: 8px 0;
+    text-align: start;
+}
+
+.link {
+    color: #fff;
+}
+
+.link:hover {
+    color: #FAF0CA;
+}
+
+.link.router-link-active {
+    color: #FAF0CA;
+}
+
+.shadow-none {
+    box-shadow: none;
 }
 </style>
