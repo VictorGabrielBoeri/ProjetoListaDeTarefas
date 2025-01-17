@@ -1,5 +1,9 @@
 # alura-tracker
 
+#Oque é?:
+
+#É uma aplicação responsável por controlar o tempo gasto em cada tarefa
+
 ## Project setup
 ```
 npm install
@@ -18,7 +22,3 @@ npm run build
 ### Lints and fixes files
 ```
 npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
