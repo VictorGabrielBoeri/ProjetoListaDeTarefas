@@ -18,6 +18,8 @@
 import { useStore } from '@/store';
 import { ALTERA_PROJETO, ADICIONA_PROJETO } from '@/store/tipo-mutacoes';
 import { defineComponent } from 'vue';
+import { TipoNotificacao } from '@/interfaces/INotificacao';
+import useNotificador from '@/hooks/notificador';
 
 
 export default defineComponent({
@@ -27,7 +29,7 @@ export default defineComponent({
             type: String
         }
     },
-    mounted () {
+    mounted() {
         if (this.id) {
             const projeto = this.store.state.projetos.find(proj => proj.id == this.id)
             this.nomeDoProjeto = projeto?.nome || ''
@@ -45,17 +47,21 @@ export default defineComponent({
                     id: this.id,
                     nome: this.nomeDoProjeto,
                 })
+                this.notificar(TipoNotificacao.ATENCAO, 'Editado!', 'O projeto foi editado')
             } else {
                 this.store.commit(ADICIONA_PROJETO, this.nomeDoProjeto)
             }
             this.nomeDoProjeto = '';
+            this.notificar(TipoNotificacao.SUCESSO, 'Exelente!', 'O projeto foi criado com sucesso')
             this.$router.push('/projetos')
         },
     },
-    setup () {
+    setup() {
         const store = useStore()
+        const { notificar } = useNotificador()
         return {
             store,
+            notificar
         }
     }
 })
