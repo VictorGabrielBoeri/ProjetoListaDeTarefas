@@ -1,6 +1,5 @@
 <template>
-    <section class="projetos">
-        <h1 class="title title-modo-escuro">Projetos</h1>
+    <section>
         <form @submit.prevent="salvar">
             <div class="field mb-4">
                 <label class="label title-modo-escuro mb-3" for="nomeDoProjeto">
@@ -60,13 +59,3 @@ export default defineComponent({
     }
 })
 </script>
-
-<style scoped>
-.projetos {
-    padding: 1.25rem;
-}
-
-.title-modo-escuro {
-    color: var(--texto-primario);
-}
-</style>
