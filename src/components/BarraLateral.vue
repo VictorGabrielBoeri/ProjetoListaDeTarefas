@@ -24,6 +24,16 @@
                 </li>
             </ul>
         </nav>
+
+        <div class="is-flex">
+            <a class="mr-5" href="https://github.com/VictorGabrielBoeri" target="_blank">
+                <i class="fa-brands fa-github icone-sm"></i>
+            </a>
+
+            <a href="https://instagram.com/victor.gabriel.boeri" target="_blank">
+                <i class="fa-brands fa-instagram icone-sm"></i>
+            </a>
+        </div>
     </header>
 </template>
 
@@ -96,5 +106,12 @@ header {
     font-size: 110px;
     color: white;
     margin-bottom: 50px;
+}
+
+.icone-sm {
+    display: flex;
+    justify-content: left;
+    font-size: 35px;
+    color: white;
 }
 </style>
