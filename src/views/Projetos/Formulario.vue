@@ -2,7 +2,7 @@
     <section>
         <form @submit.prevent="salvar">
             <div class="field mb-4">
-                <label class="label title-modo-escuro mb-3" for="nomeDoProjeto">
+                <label class="label title mb-3" for="nomeDoProjeto">
                     Nome Do Projeto
                 </label>
                 <input class="input mb-3" type="text" v-model="nomeDoProjeto" id="nomeDoProjeto">

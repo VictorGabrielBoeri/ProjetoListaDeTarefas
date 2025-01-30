@@ -1,7 +1,8 @@
 <template>
     <header>
         <h1>
-            <img src="../assets/logo.png" alt="">
+            <!-- <img src="../assets/logo.png" alt=""> -->
+            <i class="fa-solid fa-laptop-code icone"></i>
         </h1>
         <button class="button" @click="alterarTema">
             {{ textoBotao }}
@@ -89,5 +90,11 @@ header {
 
 .shadow-none {
     box-shadow: none;
+}
+
+.icone {
+    font-size: 110px;
+    color: white;
+    margin-bottom: 50px;
 }
 </style>

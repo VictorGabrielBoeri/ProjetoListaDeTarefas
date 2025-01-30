@@ -52,4 +52,8 @@ main.modo-escuro {
 .conteudo {
   background-color: var(--bg-primario);
 }
+
+.title {
+  color: var(--texto-primario);
+}
 </style>

@@ -18,7 +18,7 @@ export default defineComponent({
     padding: 1.25rem;
 }
 
-.title-modo-escuro {
+.title {
     color: var(--texto-primario);
 }
 </style>
